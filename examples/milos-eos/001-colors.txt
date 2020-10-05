@@ -1,0 +1,8 @@
+theme_color :red, "#FF0000"
+theme_color :green, "#00FF00"
+theme_color :blue, "#0000FF"
+
+page "start"
+  say "Hello <c:red>Red</c>, <c:green>Green</c> and <c:blue>Blue</c>! **In bold?** Or <c:#FF0088>custom</c> colors?"
+  stop_tease
+end

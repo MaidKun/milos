@@ -1,0 +1,28 @@
+{
+  "name": "milos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/yargs": "^15.0.5",
+    "ncp": "^2.0.0",
+    "pegjs": "^0.10.0",
+    "ts-pegjs": "^0.2.6",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:grammar && npm run copy:assets",
+    "build:grammar": "pegjs -o ./dist/src/milos/grammar.js grammar/milos.pegjs",
+    "copy:assets": "ncp 'assets/' 'dist/src/'",
+    "milos": "node dist/index.js",
+    "test": "node dist/index.js && node testrun.js"
+  },
+  "dependencies": {
+    "@types/node": "^13.1.8",
+    "@types/request-promise-native": "^1.0.17",
+    "node-minify": "^3.6.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8",
+    "yargs": "^15.4.1"
+  }
+}

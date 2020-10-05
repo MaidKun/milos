@@ -1,0 +1,47 @@
+include_default_getter_and_setter
+
+number value: 0
+
+page "start"
+  prompt_number :value, "Enter a number between 1 and 6"
+
+  if value < 1 || value > 6
+    say "That's not between 1 and 6"
+    goto_page "start"
+  end
+  
+  value = floor(value)
+
+  goto_page "$page-#{value}"
+end
+
+page "page-1"
+  say "Welcome to page ONE"
+  goto_page "start"
+end
+
+page "page-2"
+  say "Welcome to page TWO"
+  goto_page "start"
+end
+
+page "page-3"
+  say "Welcome to page THREE"
+  goto_page "start"
+end
+
+page "page-4"
+  say "Welcome to page FOUR"
+  goto_page "start"
+end
+
+page "page-5"
+  say "Welcome to page FIVE"
+  goto_page "start"
+end
+
+page "page-6"
+  say "Welcome to page SIX"
+  goto_page "start"
+end
+

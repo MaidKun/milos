@@ -1,0 +1,14 @@
+include_default_getter_and_setter
+
+number start_time: 0
+
+page "start"
+  start_time = current_time
+  goto_page "loop"
+end
+
+page "loop"
+  say "It's been #{current_time - start_time} seconds since you started the game!", mode: :instant
+  button "Update"
+  goto_page "loop"
+end

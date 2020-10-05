@@ -1,0 +1,10 @@
+include_script "001-middleware.js"
+
+number times: 0
+
+page "start"
+  say "You clicked the button #{s_} times. It's #{twice:times} when doubled."
+  button "Click me!"
+  times += 1
+  goto_page "start"
+end

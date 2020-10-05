@@ -1,0 +1,4 @@
+page "start"
+  say "Hello World!"
+  stop_tease
+end
