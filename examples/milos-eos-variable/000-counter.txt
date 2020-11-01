@@ -3,7 +3,7 @@ include_default_getter_and_setter
 number times: 0
 
 page "start"
-  say "You clicked the button #{s_} times"
+  say "You clicked the button #{times}"
   button "Click me!"
   times += 1
   goto_page "start"
